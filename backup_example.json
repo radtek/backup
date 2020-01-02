@@ -1,0 +1,53 @@
+{
+  "links":
+  [
+    {
+      "src": "/mounted/?",
+      "dst": "/home/symlink_name"
+    }
+  ],
+  "devices":
+  [
+    {
+      "name": "android",
+      "type": "not_supported",
+      "path" : "/home/symlink_name",
+      "working_folder": "bkp",
+      "free_space_threshold_gb": 1,
+      "sources":
+      [
+        {
+          "path": "/home/f1"
+        },
+        {
+          "path": "/home/f2"
+        }
+      ]
+    },
+    {
+      "name": "another_device",
+      "type": "folder",
+      "path": "/mnt/disk",
+      "working_folder": "bkp",
+      "free_space_threshold_gb": 5,
+      "sources":
+      [
+        {
+          "path": "/home/f3"
+        }
+      ]
+    }
+  ],
+ "ignore":
+ [
+    "*.bak",
+    "*.pyc",
+    "*.tmp",
+    ".git"
+  ],
+  "notifications":
+  [
+    "Don't you forget to prepare xxx?",
+    "Don't you forget to cleanup yyy?"
+  ]
+}
